@@ -52,7 +52,7 @@ or
 - Build the templating language directly into the html, exactly as your front-end users will see it.
 - Extremely lightweight; doesn't depend on back-end build systems or site generators. Just a few javascript imports.
     - you don't have to deal with the learning curve of heavy weight frameworks
-
+- Extremely fast and data-efficient; backend sends _just_ JSON, front-end templating handled by the users local machine.
 
 # Where it gets wonky
 
