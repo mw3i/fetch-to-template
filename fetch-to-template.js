@@ -26,3 +26,4 @@ document.addEventListener('alpine:init', () => {
                 el.innerHTML = rendered;
             });
     });
+});
