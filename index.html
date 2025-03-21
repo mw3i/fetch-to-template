@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Alpine.js with Nunjucks</title>
+    <script src="https://cdn.jsdelivr.net/npm/nunjucks@3.2.4/browser/nunjucks.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="fetch-to-template.js" defer></script>
+</head>
+<body>
+
+<!-- Now, anywhere in your site, you can define a add the x-fetch-to-template, and it routes the data to the template you define. It doesn't even have to be a template. If you want, you can just route it to the div itself; just leave target_id blank -->
+<div class="uk-container uk-margin-top" x-data>
+    <h1 class="uk-heading-medium">Top 10 Users</h1>
+    <div x-fetch-to-template="{ url: 'https://jsonplaceholder.typicode.com/users', target_id: '#someTemplate' }">
+        <template id='someTemplate'>
+            {% for user in data %}
+            <p>{{user.name}} at {{user.email}} is with {{user.company.name}}</p>
+            {% endfor %}
+        </template>
+    </div>
+</div>
+
+</body>
+</html>
