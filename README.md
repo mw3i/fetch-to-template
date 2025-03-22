@@ -62,4 +62,4 @@ or
 # Where it gets wonky
 
 - If you're using a different templating engine for site generation (e.g., liquid html), you have to ensure front-end templating and back-end templating don't conflict
-    - This can be accomplished by switching the syntax for nunjucks from {{...}},{%...%} -to-> [[...]],[%...%] (which nunjucks let's you do pretty easily)
+    - This can be accomplished by switching the syntax for nunjucks from {% raw %}{{...}},{%...%}{% endraw %} -to-> [[...]],[%...%] (which nunjucks let's you do pretty easily)
