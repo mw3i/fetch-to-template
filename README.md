@@ -17,14 +17,17 @@ Import the javascript file, along with [Alpine.js](https://alpinejs.dev/) and [N
 
 Add the `x-fetch-to-template` attribute; specify the url and target (if target's left blank, defaults to the element with the `x-fetch-to-template` tag).
 
+{% raw %}
 ```html
 <div x-fetch-to-template="{ url: '/url/you/want/to/fetch/data/from', target_id: '#targetID' }">
 ...
 </div>
 ```
+{% endraw %}
 
 And that's it. Then you just template like you normally would, using {{ data }} as the root name for the JSON data you pulled in. For example:
 
+{% raw %}
 ```html
 <div x-fetch-to-template="{ url: 'https://jsonplaceholder.typicode.com/users', target_id: '#someTemplate' }">
     <template id='someTemplate'>
@@ -34,9 +37,11 @@ And that's it. Then you just template like you normally would, using {{ data }} 
     </template>
 </div>
 ```
+{% endraw %}
 
 or
 
+{% raw %}
 ```html
 <div x-fetch-to-template="{ url: 'https://jsonplaceholder.typicode.com/users' }">
     \{\% for user in data \%\}
@@ -44,7 +49,7 @@ or
     \{\% endfor \%\}
 </div>
 ```
-
+{% endraw %}
 
 # Why it's awesome
 
