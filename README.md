@@ -29,7 +29,7 @@ And that's it. Then you just template like you normally would, using {{ data }} 
 <div x-fetch-to-template="{ url: 'https://jsonplaceholder.typicode.com/users', target_id: '#someTemplate' }">
     <template id='someTemplate'>
         {% for user in data %}
-        <p>{{user.name}} at {{user.email}} is with {{user.company.name}}</p>
+        <p>\{\{user.name\}\} at \{\{user.email\}\} is with \{\{user.company.name\}\}</p>
         {% endfor %}
     </template>
 </div>
@@ -39,9 +39,9 @@ or
 
 ```html
 <div x-fetch-to-template="{ url: 'https://jsonplaceholder.typicode.com/users' }">
-    {% for user in data %}
-    <p>{{user.name}} at {{user.email}} is with {{user.company.name}}</p>
-    {% endfor %}
+    \{\% for user in data \%\}
+    <p>\{\{user.name}} at \{\{user.email\}\} is with \{\{user.company.name\}\}</p>
+    \{\% endfor \%\}
 </div>
 ```
 
