@@ -46,7 +46,7 @@ or
 ```
 
 
-# Why it's great
+# Why it's awesome
 
 - Separation of concerns: all front-end logic stays in the front-end html (the back-end api only has to worry about supplying the JSON data)
 - Build the templating language directly into the html, exactly as your front-end users will see it.
